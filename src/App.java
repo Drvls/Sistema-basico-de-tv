@@ -98,13 +98,13 @@ public class App {
             System.out.println("");
             System.out.println("\t\tVOLUME: " + volume);
             System.out.println("");
-            options(isTvOn, channel, volumeValue);
+            options(isTvOn, channel, volume);
         } else if(volumeValue == 2){
-            volume++;
+            volume--;
             System.out.println("");
             System.out.println("\t\tVOLUME: " + volume);
             System.out.println("");
-            options(isTvOn, channel, volumeValue);
+            options(isTvOn, channel, volume);
         } else{
             System.out.println("Opção inválida");
             volumeChange(isTvOn, channel, volumeValue);
@@ -118,7 +118,7 @@ public class App {
 
         System.out.println("");
         System.out.println("\t////////////////");
-        System.out.println("\t\tTV STATUS");
+        System.out.println("\t  TV STATUS");
         System.out.println("\tEstado: " + ligado);
         System.out.println("\tCanal: " + channel);
         System.out.println("\tVolume: " + volume);
