@@ -65,18 +65,16 @@ public class App {
             channel = Integer.parseInt(stringChannel);
             options(isTvOn, channel, volume);
         } catch(NumberFormatException e){
-            channelChangeString(stringChannel, channel, isTvOn, volume);
-        }
-    }
-
-    public static void channelChangeString(String stringChannel, int channel, boolean isTvOn, int volume){
-        if(stringChannel == "aumentar"){
-            channel++;
-        } else if(stringChannel == "diminuir"){
-            channel--;
-        } else{
-            System.out.println("Dado inválido");
-            channelChange(isTvOn, channel, volume);
+            if(stringChannel.equals("aumentar")){
+                channel++;
+                options(isTvOn, channel, volume);
+            } else if(stringChannel.equals("diminuir")){
+                channel--;
+                options(isTvOn, channel, volume);
+            } else{
+                System.out.println("Dado inválido");
+                channelChange(isTvOn, channel, volume);
+            }
         }
     }
 
