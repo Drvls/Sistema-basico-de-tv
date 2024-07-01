@@ -23,7 +23,7 @@ public class App {
 
         switch (option) {
             case 1:
-                onOff(isTvOn);
+                onOff(isTvOn, channel, volume);
                 break;
             case 2:
                 channelChange(isTvOn, channel, volume);
@@ -43,7 +43,7 @@ public class App {
         }
     }
 
-    public static void onOff(boolean isTvOn){
+    public static void onOff(boolean isTvOn, int channel, int volume){
         isTvOn = (isTvOn == false) ? true : false;
         if(isTvOn == true){
             System.out.println("");
@@ -55,7 +55,7 @@ public class App {
             System.out.println("");
         }
 
-        options(isTvOn, 0, 0);
+        options(isTvOn, channel, volume);
     }
 
     public static void channelChange(boolean isTvOn, int channel, int volume){
