@@ -12,11 +12,13 @@ public class App {
     public static void options(boolean isTvOn, int channel, int volume){
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("");
         System.out.println("\t\tOpções: ");
         System.out.println("\t1- Ligar/Desligar tv");
         System.out.println("\t2- Mudar de canal");
         System.out.println("\t3- Aumentar/diminuir volume");
         System.out.println("\t4- Tv Status");
+        System.out.println("");
         int option = sc.nextInt();
 
         switch (option) {
@@ -26,10 +28,14 @@ public class App {
             case 2:
                 channelChange(isTvOn, channel, volume);
                 break;
+            case 3:
+                volumeChange(isTvOn, channel, volume);
+                break;
             case 4:
                 tvStatus(isTvOn, channel, volume);
                 break;
             default:
+                System.out.println("");
                 System.out.println("!! Dado inválido.");
                 System.out.println("");
                 options(isTvOn, channel, volume);
@@ -78,6 +84,33 @@ public class App {
         }
     }
 
+    public static void volumeChange(boolean isTvOn, int channel, int volume){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("");
+        System.out.println("\t  VOLUME");
+        System.out.println("\t1- Aumentar");
+        System.out.println("\t2- Diminuir");
+        System.out.println("");
+        int volumeValue = sc.nextInt();
+        if (volumeValue == 1) {
+            volume++;
+            System.out.println("");
+            System.out.println("\t\tVOLUME: " + volume);
+            System.out.println("");
+            options(isTvOn, channel, volumeValue);
+        } else if(volumeValue == 2){
+            volume++;
+            System.out.println("");
+            System.out.println("\t\tVOLUME: " + volume);
+            System.out.println("");
+            options(isTvOn, channel, volumeValue);
+        } else{
+            System.out.println("Opção inválida");
+            volumeChange(isTvOn, channel, volumeValue);
+        }
+    }
+
     public static void tvStatus(boolean isTvOn, int channel, int volume){
         Scanner sc = new Scanner(System.in);
         String ligado = (isTvOn == true) ? "Ligado" : "Desligado";
@@ -85,7 +118,7 @@ public class App {
 
         System.out.println("");
         System.out.println("\t////////////////");
-        System.out.println("\tTV STATUS");
+        System.out.println("\t\tTV STATUS");
         System.out.println("\tEstado: " + ligado);
         System.out.println("\tCanal: " + channel);
         System.out.println("\tVolume: " + volume);
