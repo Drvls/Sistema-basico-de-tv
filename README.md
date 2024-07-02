@@ -8,6 +8,10 @@ Exercício de criar um sistema de tv onde contém as seguintes regras:
 - Nossa TV poderá mudar de canal de 1 em 1 ou definindo o número correspondente.
 
 O sistema será atualizado até o fim do meu estudo para que seja otimizado e melhor escrito.
+---
+
+**App.java possui um sistema de Scanners de entrada com métodos requisitados com funções solicitadas acima.**
+**SmartTv.java possui métodos de uma SmartTv em formado de API.**
 
 ---
 
