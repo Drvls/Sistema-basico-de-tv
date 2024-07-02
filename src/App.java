@@ -41,6 +41,7 @@ public class App {
                 options(isTvOn, channel, volume);
                 break;
         }
+        sc.close();
     }
 
     public static void onOff(boolean isTvOn, int channel, int volume){
@@ -82,6 +83,7 @@ public class App {
                 channelChange(isTvOn, channel, volume);
             }
         }
+        sc.close();
     }
 
     public static void volumeChange(boolean isTvOn, int channel, int volume){
@@ -109,6 +111,7 @@ public class App {
             System.out.println("Opção inválida");
             volumeChange(isTvOn, channel, volumeValue);
         }
+        sc.close();
     }
 
     public static void tvStatus(boolean isTvOn, int channel, int volume){
@@ -131,6 +134,7 @@ public class App {
         } else{
             System.out.println("Até logo.");
         }
+        sc.close();
     }
     
 }
