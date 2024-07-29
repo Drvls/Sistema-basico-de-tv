@@ -1,5 +1,4 @@
 # Sistema de televisão (TV)
----
 
 Exercício de criar um sistema de tv onde contém as seguintes regras:
 
@@ -8,8 +7,9 @@ Exercício de criar um sistema de tv onde contém as seguintes regras:
 - Nossa TV aumentará e diminuirá o volume sempre em +1 ou -1
 - Nossa TV poderá mudar de canal de 1 em 1 ou definindo o número correspondente.
 
-## Como utilizar cada programa
 ---
+## Como utilizar cada programa
+
 
 O programa SmartTv funciona a base de métodos, sendo eles:
 
@@ -23,7 +23,7 @@ O programa SmartTv funciona a base de métodos, sendo eles:
 Já o programa App pode ser utilizado apenas iniciando o programa, funcionando a base de scanners que apresentam as seguintes opções ao iniciar:
 
         1- Ligar/Desligar televisão
-        2- Mudar de canal
+	2- Mudar de canal
         3- Aumentar/Diminuir volume
         4 Tv Status
 
